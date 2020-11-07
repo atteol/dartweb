@@ -1,5 +1,5 @@
-// Include the Dartweb library (minified)
-const dartweb = require("../dist/dartweb.min");
+// Include the Dartweb library
+const dartweb = require("../src/dartweb/dartweb");
 
 // Basic request with an error handler.
 // Requests the root path (empty path string: "") from the address "exampleserver".

@@ -1,5 +1,5 @@
-// Include the Dartweb library (minified)
-const dartweb = require("./dartweb.min.js");
+// Include the Dartweb library
+const dartweb = require("../src/dartweb/dartweb");
 
 // Include filesystem for reading files (built-in)
 const fs = require("fs");
