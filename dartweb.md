@@ -1,5 +1,5 @@
 # Dartweb Nodejs library Documentation
-* Note: This documentation assumes you are using the default (KantonDev) central server.
+* **Note**: This documentation assumes you are using the default (KantonDev) central server.
 
 ## How to install
 Currently, the Dartweb library is only available by cloning/downloading from the repository. The library is very compact and only requires one file (dartweb.js). It can be found in `src/dartweb/`.
@@ -34,8 +34,8 @@ dartweb.request(
 
 Parameters:
 * **targetServer**: The address of the Dartweb server that is being queried.
-* **targetPath**: The path to request from.
-* **onError(Error)**: Callback to be called when an error occurs in the request.
+* **targetPath**: The path to request from. Leave empty (`""`) to request from the root path.
+* **onError(Error)**: Callback to be called when an error occurs.
 * **onResponse(Response)**: Callback to be called when a response is received from the server.
 
 The `onError` callback in `request` provides you an Error object, unlike the `onError` callback in `hostServer` as it only provides the error message as a string.
@@ -78,7 +78,7 @@ dartweb.hostServer(
 ```
 
 Parameters:
-* **dartwebToken**: Your server token. Check the [readme] for more information.
+* **dartwebToken**: Your server token. Check the [readme](https://github.com/botboi37/dartweb/blob/master/README.md) for more information.
 * **serverName**: The name of your server. Server names are visible in some error messages and all API requests. The server name can be any string 2-24 characters long, and it can change each time you connect.
 * **allowTypes**: An object containing your request type allow/deny preferences. For example, `{"browser": true, "api": false}` would mean your server can be accessed via browser (GET) and cannot be accessed via the Dartweb API (POST). If either (or both) preferences are not specified, they default to `true`.
 * **onError(error)**: Callback to be called when the server experiences an error, such as an unauthorized token, or sending invalid data to clients.
@@ -117,4 +117,4 @@ A proper Response to be used in `respond` must contain the following properties:
 
 
 ## Need some examples to get started?
-For a few practical examples of using the library, check the [tests](https://github.com/botboi37/dartweb/tree/main/tests).
+For a few practical examples of using the library, check the [tests](https://github.com/botboi37/dartweb/tree/master/tests).
