@@ -1,0 +1,8 @@
+# Node library files
+node_modules
+
+# Central server token data
+src/central/TOKENS.json
+
+# Central server SSL info
+ssl/
