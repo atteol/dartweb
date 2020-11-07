@@ -6,3 +6,6 @@ src/central/TOKENS.json
 
 # Central server SSL info
 ssl/
+
+# Nohup log files
+**/nohup.out
