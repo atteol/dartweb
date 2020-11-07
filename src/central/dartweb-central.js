@@ -6,9 +6,9 @@ const WebSocket = require("ws");
 
 // replace with your SSL files
 const ssl = {
-    key: fs.readFileSync("../../ssl/key.pem", "utf8"),
-    cert: fs.readFileSync("../../ssl/cert.pem", "utf8"),
-    ca: fs.readFileSync("../../ssl/chain.pem", "utf8")
+    key: fs.readFileSync("/etc/letsencrypt/live/dartweb.kantondev.org/privkey.pem"),
+    cert: fs.readFileSync("/etc/letsencrypt/live/dartweb.kantondev.org/cert.pem"),
+    ca: fs.readFileSync("/etc/letsencrypt/live/dartweb.kantondev.org/fullchain.pem")
 }
 
 const EXT_PORT_LISTEN = 9999;
@@ -137,7 +137,7 @@ https.createServer(ssl, (req, res) => {
 
         let ogUrl = req.url;
 
-        if (ogUrl == "/") return res.end(`[DARTWEB ERROR] ${GET_FORMATTED_DATE()}\nMissing target server. Use URL format: https://dartweb.kantondev.org:6969/serveraddress/path/path2/etc`);
+        if (ogUrl == "/") return res.end(`[DARTWEB ERROR] ${GET_FORMATTED_DATE()}\nMissing target server. Use URL format: https://dartweb.kantondev.org:9999/serveraddress/path/path2/etc`);
         else ogUrl = ogUrl.substring(1);
 
         if (!isValidURL(ogUrl)) return res.end(`[DARTWEB ERROR] ${GET_FORMATTED_DATE()}\nInvalid target server`);
