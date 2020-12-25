@@ -1,3 +1,5 @@
+NOTE: Project archived, and the default central network (KantonDev) does not issue tokens anymore.
+
 # dartweb
 
 ## What's Dartweb
@@ -15,7 +17,7 @@ A server can deny browser requests. In this case, you are supposed to request fr
 
 ## How can I host a Dartweb server?
 To host a server on the default (KantonDev) Dartweb network, you need a secret and unique server token. This enables us to approve and, later on, trust servers.
-Request a token by email: [adde@kantondev.org](mailto:adde@kantondev.org). Include the address you would like to reserve for your server, and an identifiable server owner name (doesn't have to be your real name).
+Request a token from the owner of the central server. Include the address you would like to reserve for your server, and an identifiable server owner name (doesn't have to be your real name).
 Then use the Dartweb Nodejs library to connect your server. Read more about the library [here](https://github.com/botboi37/dartweb/blob/master/dartweb.md).
 
 ## Can I host my own central server?
